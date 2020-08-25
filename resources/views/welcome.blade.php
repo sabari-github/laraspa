@@ -3,12 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <title>Laravel</title>
-
-        <!-- Fonts -->
-        <!-- <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet"> -->
-
+        <title>SPA</title>
         <!-- Styles -->
         <link href="{{ asset('resources/assets/css/styles.css') }}" rel="stylesheet">
         <style>
@@ -74,12 +69,11 @@
                         <a href="{{ route('login') }}">Login</a>
 
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
+                            <a href="{{ route('register') }}">{{ trans('messages.lbl_classes') }}</a>
                         @endif
                     @endauth
                 </div>
             @endif
-
             <div class="content">
                 <div class="title m-b-md">S P A</div>
                 <div class="links">

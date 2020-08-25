@@ -4,7 +4,7 @@
 <script type="text/javascript" src="{{ asset('resources/assets/js/result.js') }}"></script>
 <h1>{{ $display['heading'] }}</h1>
 <ul class="breadcrumb">
-    <li class="breadcrumb-item"><a href="{{ route('home') }}"><i class="fa fa-home"></i> Home</a></li>
+    <li class="breadcrumb-item"><a href="{{ route('home') }}"><i class="fa fa-home"></i>{{ trans('messages.lbl_home') }}</a></li>
     <li class="breadcrumb-item"><a href="{{ route('result.list') }}">{{ 'Result' }}</a></li>
     <li class="breadcrumb-item active">{{ $display['heading'] }}</li>
 </ul>
@@ -77,7 +77,6 @@
                 </div>
                 <div id="placeSubject"></div>
                 @endif
-
                 <!-- 更新の場合 -->
                 @if(isset($subList))
                     @foreach($subList as $key => $list)
@@ -99,7 +98,7 @@
                     <div class="col-md-12">
                         <center>
                             <button type="button" name="button" class="btn btn-outline-success" onclick="formSubmit('{{ $display['button']}}');">{{ $display['button'] }}</button>
-                            <button type="button" class="btn btn-outline-dark page-return" data-href="{{ route('result.list') }}" data-act="Cancel">Cancel</button>
+                            <button type="button" class="btn btn-outline-dark page-return" data-href="{{ route('result.list') }}" data-act="Cancel">{{ trans('messages.lbl_cancel') }}</button>
                         </center>
                     </div>
                 </div>

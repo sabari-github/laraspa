@@ -31,7 +31,7 @@ class SubjectsController extends Controller
     public function list()
     {
         $display = array();
-        $display['heading'] = "Subject List";
+        $display['heading'] = trans('messages.lbl_subject_list');
 
         $data = Subjects::paginate(10);
         return view('admin.subjects.list', compact('display', 'data'));
@@ -40,7 +40,6 @@ class SubjectsController extends Controller
     /**
     * 科目表示画面
     * @param $id
-    * @return 科目ビュー画面へ移動する
     */
     public function view($id)
     {
@@ -69,16 +68,14 @@ class SubjectsController extends Controller
         $display = array();
         $dataedit = array();
         $display['heading'] = "Subject Register";
-        $display['button'] = "Register";
+        $display['button'] = trans('messages.lbl_register');;
 
         return view('admin.subjects.addedit', compact('display'));
     }
 
     /**
     * 科目情報を登録する
-    *
     * @param $request
-    * @return 科目一覧画面へ移動する
     */
     public function doAdd(SubjectsRequest $request) 
     {
@@ -106,7 +103,7 @@ class SubjectsController extends Controller
     {
         $display = array();
         $display['heading'] = "Subject Update";
-        $display['button'] = "Update";
+        $display['button'] = trans('messages.lbl_update');
 
         // IDに該当する科目情報を取得する
         $data = Subjects::where('id', '=', $id)->find($id);
@@ -159,7 +156,7 @@ class SubjectsController extends Controller
         $display = array();
         $dataedit = array();
         $display['heading'] = "Subject Class Relation Register";
-        $display['button'] = "Register";
+        $display['button'] = trans('messages.lbl_register');;
 
         // 授業一覧
         $classlist = $this->setList(Classes::getClassList());
@@ -197,7 +194,7 @@ class SubjectsController extends Controller
         $display = array();
         $dataedit = array();
         $display['heading'] = "Subject Class Relation Edit";
-        $display['button'] = "Update";
+        $display['button'] = trans('messages.lbl_update');
 
         // 授業一覧
         $classlist = $this->setList(Classes::getClassList());

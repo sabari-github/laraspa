@@ -3,13 +3,13 @@
 @section('content')
 <h1>{{ $display['heading'] }}</h1>
 <ol class="breadcrumb mb-2">
-    <li class="breadcrumb-item"><a href="{{ route('home') }}"><i class="fa fa-home mr-1"></i>Home</a></li>
-    <li class="breadcrumb-item">Classes</li>
+    <li class="breadcrumb-item"><a href="{{ route('home') }}"><i class="fa fa-home"></i>{{ trans('messages.lbl_home') }}</a></li>
+    <li class="breadcrumb-item">{{ trans('messages.lbl_classes') }}</li>
     <li class="breadcrumb-item active">{{ $display['heading'] }}</li>
 </ol>
 <div class="row mb-2">
     <div class="col-sm-12">
-        <a href="{{ route('classes.add') }}" class="btn btn-outline-success">Register</a>
+        <a href="{{ route('classes.add') }}" class="btn btn-outline-success">{{ trans('messages.lbl_classes') }}</a>
     </div>
 </div>
 <div class="table-responsive">
@@ -27,7 +27,7 @@
         <tbody>
             @foreach($data as $key => $list)
                 <tr>
-                    <td>{{ $key+1 }}</td>
+                    <td>{{ $data->firstItem()+$key }}</td>
                     <td class="text-left">{{ $list->class_name }}</td>
                     <td>{{ $list->class_name_numeric }}</td>
                     <td>{{ $list->section }}</td>

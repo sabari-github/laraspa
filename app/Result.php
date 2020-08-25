@@ -67,7 +67,6 @@ class Result extends Model {
     /**
     * 結果情報登録する.
     * @param Array data
-    * @return Array
     */
     public static function insertResult($data) {
 
@@ -95,6 +94,21 @@ class Result extends Model {
         $query = DB::table('result')
                 ->select(DB::raw('(round((sum(marks)*100)/(100*count(subject_id))))as percent'))
                 ->groupBy('class_id', 'student_id')
+                ->get();
+
+        return $query;
+    }
+
+    /**
+    * 授業と科目のレンジを取得する
+    */
+    public static function getSubjectClassRange() {
+
+        $query = DB::table('subject_class_relation')
+                ->select('subject_class_relation.class_id', 'classes.class_name', DB::raw('count(subject_class_relation.subject_id) as subject_cnt'))
+                ->leftJoin('classes', 'classes.id', '=', 'subject_class_relation.class_id', 'classes.valid_flg','=','0')
+                ->where('subject_class_relation.valid_flg', 0)
+                ->groupBy('subject_class_relation.class_id')
                 ->get();
 
         return $query;

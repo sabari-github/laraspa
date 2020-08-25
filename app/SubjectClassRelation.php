@@ -27,7 +27,6 @@ class SubjectClassRelation extends Model {
 
     /**
     * 科目リスト情報を取得する.
-    * @return Data Array
     */
     public static function getSubjectClassDetails() {
 
@@ -36,7 +35,7 @@ class SubjectClassRelation extends Model {
                     DB::raw('concat (classes.class_name," - ",classes.section) as class_section'))
                 ->leftJoin('classes', 'classes.id', '=', 'subject_class_relation.class_id')
                 ->leftJoin('subjects', 'subjects.id', '=', 'subject_class_relation.subject_id')
-                ->get();
+                ->paginate(10);
         return $query;
     }
 

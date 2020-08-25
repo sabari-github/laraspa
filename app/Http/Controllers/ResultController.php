@@ -30,7 +30,7 @@ class ResultController extends Controller
     public function list()
     {
         $display = array();
-        $display['heading'] = "Result List";
+        $display['heading'] = trans('messages.lbl_student_list');
         // 結果詳細情報を取得する
         $data = Result::getResultList();
         return view('admin.result.list', compact('data', 'display'));
@@ -66,7 +66,7 @@ class ResultController extends Controller
         $display = array();
         $classlist = array();
         $display['heading'] = "Result Register";
-        $display['button'] = "Register";
+        $display['button'] = trans('messages.lbl_register');;
 
         // 事業一覧
         $classlist = $this->setList(Classes::getClassList());
@@ -146,7 +146,7 @@ class ResultController extends Controller
         $display = array();
         $classlist = array();
         $display['heading'] = "Result Update";
-        $display['button'] = "Update";
+        $display['button'] = trans('messages.lbl_update');
 
         // 授業一覧
         $classlist = $this->setList(Classes::getClassList());

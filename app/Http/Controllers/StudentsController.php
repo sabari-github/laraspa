@@ -27,7 +27,7 @@ class StudentsController extends Controller
     public function list()
     {
         $display = array();
-        $display['heading'] = "Student Lists";
+        $display['heading'] = trans('messages.lbl_student_list');
 
         $data = Students::getAllStudent();
         return view('admin.students.list', compact('data', 'display'));
@@ -66,7 +66,7 @@ class StudentsController extends Controller
         $display = array();
         $classlist = array();
         $display['heading'] = "Student Register";
-        $display['button'] = "Register";
+        $display['button'] = trans('messages.lbl_register');;
 
         // 事業一覧
         $classlist = $this->setList(Classes::getClassList());
@@ -104,7 +104,7 @@ class StudentsController extends Controller
         $display = array();
         $classlist = array();
         $display['heading'] = "Student Update";
-        $display['button'] = "Update";
+        $display['button'] = trans('messages.lbl_update');
 
         // 授業一覧
         $classlist = $this->setList(Classes::getClassList());

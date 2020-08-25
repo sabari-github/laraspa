@@ -6,6 +6,9 @@ return [
     'lbl_students' => '学生',
     'lbl_classes' => '授業',
     'lbl_subjects' => '科目',
+    'lbl_student_list' => '学生一覧',
+    'lbl_result_list' => '結果一覧',
+    'lbl_subject_list' => '科目一覧',
     'lbl_subject_class_list' => '科目授業一覧',
     'lbl_result' => '結果',
     'lbl_list' => '一覧',
@@ -17,7 +20,8 @@ return [
 
     // ホーム
 	'lbl_students_mark_range' => '学生のマーク範囲',
-	'lbl_students_score_pie_chart' => '学生スコアの円グラフ',
+    'lbl_students_score_pie_chart' => '学生スコアの円グラフ',
+    'lbl_students_subject_class_average' => '科目とクラスの平均',
 	'lbl_total_no_of_students' => '学生の総数',
 	'lbl_fail' => '不合格',
 	'lbl_pass' => '合格',
@@ -33,4 +37,7 @@ return [
     'lbl_forgot_password'     => 'Forgot Password',
     'lbl_reset_password'     => 'リセットパスワード',
     'lbl_cancel'     => 'キャンセル',
+
+    // Class
+    'lbl_class_list'     => '授業一覧',
 ];

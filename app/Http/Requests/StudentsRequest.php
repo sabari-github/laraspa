@@ -26,7 +26,7 @@ class StudentsRequest extends FormRequest
     {
         return [
             'student_name' => 'required',
-            'roll_no' => 'required|numeric',
+            'roll_no' => 'required|numeric|unique:students',
             'class_id' => 'required|numeric'
         ];
     }

@@ -31,7 +31,7 @@ class ClassesController extends Controller
     public function list()
     {
         $display = array();
-        $display['heading'] = "Classes List";
+        $display['heading'] = trans('messages.lbl_class_list');
 
         $data = Classes::paginate(10);
         return view('admin.classes.list', compact('display', 'data'));
@@ -71,7 +71,7 @@ class ClassesController extends Controller
         $display = array();
         $dataedit = array();
         $display['heading'] = "Classes Register";
-        $display['button'] = "Register";
+        $display['button'] = trans('messages.lbl_register');
 
         return view('admin.classes.addedit', compact('display'));
     }
@@ -108,7 +108,7 @@ class ClassesController extends Controller
     {
         $display = array();
         $display['heading'] = "Class Update";
-        $display['button'] = "Update";
+        $display['button'] = trans('messages.lbl_update');
 
         // IDに該当する授業情報を取得する
         $data = Classes::where('id', '=', $id)->find($id);

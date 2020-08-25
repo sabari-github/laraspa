@@ -6,6 +6,9 @@ return [
     'lbl_students' => 'Students',
     'lbl_classes' => 'Classes',
     'lbl_subjects' => 'Subjects',
+    'lbl_result_list' => 'Result List',
+    'lbl_student_list' => 'Student List',
+    'lbl_subject_list' => 'Subject Class List',
     'lbl_subject_class_list' => 'Subject Class List',
     'lbl_result' => 'Result',
     'lbl_list' => 'List',
@@ -18,6 +21,7 @@ return [
     // Home
 	'lbl_students_mark_range' => 'Students Mark Range',
 	'lbl_students_score_pie_chart' => 'Students Score Pie Chart',
+    'lbl_students_subject_class_average' => 'Subject Class Average',
 	'lbl_total_no_of_students' => 'Total No of Students',
 	'lbl_fail' => 'Fail',
 	'lbl_pass' => 'Pass',
@@ -33,4 +37,9 @@ return [
     'lbl_forgot_password'     => 'Forgot Password',
     'lbl_reset_password'     => 'Reset Password',
     'lbl_cancel'     => 'Cancel',
+
+    // Class
+    'lbl_class_list'     => 'Class List',
+    'lbl_cancel'     => 'Cancel',
+
 ];

@@ -1,4 +1,3 @@
-
 /*学生情報を取得する*/
 $.ajaxSetup({
     headers: {
@@ -20,8 +19,13 @@ $(document).on('change',".onchange-class",function () {
 			let subTag = "";
 			$("#student_id").empty();
 			$("#placeSubject").empty();
-			if (resp.stuNameList.length == '0') {
+			if (class_id != "" && resp.stuNameList.length == '0') {
 				alert("該当する授業に学生の結果がもう登録されました。");
+				return false;
+			}
+
+			if (class_id != "" && resp.subDetails.length == '0') {
+				alert("該当する授業に科目が登録されませんでした。");
 				return false;
 			}
 

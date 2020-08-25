@@ -19,10 +19,8 @@ class HomeController extends Controller
     }
 
     /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
-     */
+    * ホーム
+    */
     public function index()
     {
         $display = array();
@@ -30,9 +28,10 @@ class HomeController extends Controller
                             'eighty' => 0, 'ninety' => 0, 'hundred' => 0);
         $passFail = array('pass' => 0,'fail' => 0);
         $display['heading'] = trans('messages.lbl_home');
-        // 結果詳細情報を取得する
-        $students = Students::where('valid_flg', '0')->get();
+        // 学生のmark情報を取得する
         $percent = Result::getMarkRange();
+        //  科目と授業情報を取得する
+        $subClass = Result::getSubjectClassRange();
 
         $i=1; $j=1; $k=1; $l=1; $m=1; $n=1; $o=1;
         $pass=1; $fail=1;
@@ -61,11 +60,24 @@ class HomeController extends Controller
             }
         }
 
+        // 授業と科目を配列でセットする
+        $subjectArr = array();
+        $clsNameArr = array();
+        foreach ($subClass as $key => $value) {
+            $subjectArr[$value->class_name] = $value->subject_cnt;
+            $clsNameArr[$key] = "'".$value->class_name."'";
+        }
+
+        // 授業によって科目のカウントをセットする
+        // $subjectCntArr = implode(', ', $subjectArr);
+        // 各授業名をセットする
+        // $classNameArr = implode(', ', $clsNameArr);
         // グレードによって学生のマークをセットする
-        $stuPerRange = implode(', ', $stuPercent);
+        $stuPerRange = implode(', ', array_reverse($stuPercent));
         // 合格と失敗のマークレンジをセットする
         $passFailRange = implode(', ', $passFail);
 
-        return view('admin.home', compact('percent', 'students', 'stuPerRange', 'passFailRange', 'display'));
+        return view('admin.home', compact('percent', 'stuPerRange', 'passFailRange', 'display',
+                                        'subjectArr', 'clsNameArr'));
     }
 }

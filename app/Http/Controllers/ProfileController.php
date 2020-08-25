@@ -29,7 +29,7 @@ class ProfileController extends Controller
     {
         $display = array();
         $display['heading'] = "Profile Update";
-        $display['button'] = "Update";
+        $display['button'] = trans('messages.lbl_update');
         $id = Auth::user()->id;
 
         // IDに該当する授業情報を取得する
@@ -72,7 +72,7 @@ class ProfileController extends Controller
     {
         $display = array();
         $display['heading'] = "Password Reset";
-        $display['button'] = "Update";
+        $display['button'] = trans('messages.lbl_update');
         $id = Auth::user()->id;
 
         // IDに該当する授業情報を取得する

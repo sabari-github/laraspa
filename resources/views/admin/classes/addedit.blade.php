@@ -3,7 +3,7 @@
 @section('content')
 <h1>{{ $display['heading'] }}</h1>
 <ul class="breadcrumb">
-    <li class="breadcrumb-item"><a href="{{ route('home') }}"><i class="fa fa-home"></i> Home</a></li>
+    <li class="breadcrumb-item"><a href="{{ route('home') }}"><i class="fa fa-home"></i>{{ trans('messages.lbl_home') }}</a></li>
     <li class="breadcrumb-item"><a href="{{ route('students.list') }}">{{ 'Classes' }}</a></li>
     <li class="breadcrumb-item active">{{ $display['heading'] }}</li>
 </ul>
@@ -75,7 +75,7 @@
                     <div class="col-md-12">
                         <center>
                             <button type="button" name="button" class="btn btn-outline-success" onclick="formSubmit('{{ $display['button']}}');">{{ $display['button'] }}</button>
-                            <button type="button" class="btn btn-outline-dark page-return" data-href="{{ route('classes.list') }}" data-act="Cancel">Cancel</button>
+                            <button type="button" class="btn btn-outline-dark page-return" data-href="{{ route('classes.list') }}" data-act="Cancel">{{ trans('messages.lbl_cancel') }}</button>
                         </center>
                     </div>
                 </div>
