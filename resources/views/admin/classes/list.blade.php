@@ -4,7 +4,7 @@
 <h1>{{ $display['heading'] }}</h1>
 <ol class="breadcrumb mb-2">
     <li class="breadcrumb-item"><a href="{{ route('home') }}"><i class="fa fa-home mr-1"></i>Home</a></li>
-    <li class="breadcrumb-item">Students</li>
+    <li class="breadcrumb-item">Classes</li>
     <li class="breadcrumb-item active">{{ $display['heading'] }}</li>
 </ol>
 <div class="row mb-2">
