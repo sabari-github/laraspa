@@ -11,3 +11,7 @@
 ・DMLとDDLは以下のパスからダウンロードしてください。
 
 　spa\DB\laraspa.sql
+
+・LOGIN DETAILS
+  ユーザー名：admin@gmail.com
+  パスワード：admin123
