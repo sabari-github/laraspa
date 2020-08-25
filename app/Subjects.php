@@ -25,8 +25,6 @@ class Subjects extends Model {
     */
     protected $primaryKey = 'id';
 
-    // public $timestamps = false;
-
     /**
     * 科目リスト情報を取得する.
     *

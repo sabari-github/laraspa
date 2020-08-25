@@ -49,7 +49,7 @@ class Result extends Model {
 
     /**
     * 学生の科目マーク情報を取得する
-    *
+    * @param student_id
     * @return Array
     */
     public static function getStuSubjectMarks($student_id) {
@@ -66,7 +66,7 @@ class Result extends Model {
 
     /**
     * 結果情報登録する.
-    *
+    * @param Array data
     * @return Array
     */
     public static function insertResult($data) {

@@ -25,8 +25,6 @@ class ResultController extends Controller
 
     /**
     * 結果一覧画面
-    *
-    * @param $request
     * @return 結果ビュー画面へ移動する
     */
     public function list()
@@ -40,7 +38,6 @@ class ResultController extends Controller
 
     /**
     * 結果表示画面
-    *
     * @param $id
     */
     public function view($id)
@@ -63,9 +60,6 @@ class ResultController extends Controller
 
     /**
     * 結果登録画面
-    *
-    * @param $request
-    * @return 結果ビュー画面へ移動する
     */
     public function add()
     {
@@ -82,9 +76,7 @@ class ResultController extends Controller
 
     /**
     * 学生と科目情報を取得する
-    *
     * @param $request
-    * @return 結果ビュー画面へ移動する
     */
     public function getStudentInfo(Request $request)
     {
@@ -99,7 +91,6 @@ class ResultController extends Controller
 
     /**
     * 結果情報を取得する
-    *
     * @param $request
     */
     public function chkStuResultInfo(Request $request)
@@ -114,9 +105,7 @@ class ResultController extends Controller
 
     /**
     * 学生の結果情報を登録する
-    *
     * @param $request
-    * @return 結果ビュー画面へ移動する
     */
     public function doAdd(ResultRequest $request) 
     {
@@ -150,9 +139,7 @@ class ResultController extends Controller
 
     /**
     * 編集処理
-    *
     * @param $id
-    * @return 結果編集画面へ移動する
     */
     public function edit($id)
     {
@@ -184,9 +171,7 @@ class ResultController extends Controller
 
     /**
     * 更新処理
-    *
     * @param $request
-    * @return 結果編集画面へ移動する
     */
     public function doEdit(Request $request)
     {

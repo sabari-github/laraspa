@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests;
 
+use Illuminate\Http\Request;
 use Illuminate\Foundation\Http\FormRequest;
 
 class StudentsRequest extends FormRequest
@@ -13,10 +14,6 @@ class StudentsRequest extends FormRequest
     */
     public function authorize()
     {
-        // $comment = Students::find($this->route('doEdit'));
-
-        // return $comment && $this->user()->can('update', $comment);
-
         return true;
     }
 
@@ -25,7 +22,7 @@ class StudentsRequest extends FormRequest
     *
     * @return array
     */
-    public function rules()
+    public function rules(Request $request)
     {
         return [
             'student_name' => 'required',

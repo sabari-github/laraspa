@@ -10,7 +10,7 @@ class Students extends Model {
     protected $table = 'students';
 
     protected $fillable = [
-        'student_id',
+        // 'student_id',
         'class_id',
         'roll_no',
         'student_name',
@@ -29,26 +29,22 @@ class Students extends Model {
     */
     protected $primaryKey = 'student_id';
 
-    // public $timestamps = false;
-
     /**
     * 学生詳細情報を取得する.
-    *
     * @return Array
     */
     public static function getAllStudent() {
 
         $query = DB::table('students')
                 ->leftJoin('classes', 'students.class_id', '=', 'classes.id')
-                ->paginate(3);
+                ->paginate(10);
 
         return $query;
     }
 
     /**
     * 学生詳細情報を取得する.
-    *
-    * @return Array
+    * @param id
     */
     public static function getStudentDetails($id) {
 
@@ -64,8 +60,7 @@ class Students extends Model {
 
     /**
     * 学生名一覧情報を取得する.
-    *
-    * @return Query
+    * @return 学生名一覧
     */
     public static function getStudentNameList($class_id) {
 

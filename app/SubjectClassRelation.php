@@ -25,12 +25,9 @@ class SubjectClassRelation extends Model {
     */
     protected $primaryKey = 'id';
 
-    // public $timestamps = false;
-
     /**
     * 科目リスト情報を取得する.
-    *
-    * @return Query
+    * @return Data Array
     */
     public static function getSubjectClassDetails() {
 
@@ -45,8 +42,7 @@ class SubjectClassRelation extends Model {
 
     /**
     * 授業に関連する科目情報を取得する
-    *
-    * @return Query
+    * @return Data Array
     */
     public static function getClassSubjectDetails($class_id) {
 

@@ -13,10 +13,6 @@ class ResultRequest extends FormRequest
     */
     public function authorize()
     {
-        // $comment = Students::find($this->route('doEdit'));
-
-        // return $comment && $this->user()->can('update', $comment);
-
         return true;
     }
 

@@ -31,7 +31,9 @@ class ProfileController extends Controller
         $display['heading'] = "Profile Update";
         $display['button'] = "Update";
         $id = Auth::user()->id;
+
         // IDに該当する授業情報を取得する
+
         $data = User::where('id', '=', $id)->find($id);
         // 授業データは存在しない場合一覧画面へ移動する
         if (!$data) {
@@ -43,9 +45,7 @@ class ProfileController extends Controller
 
     /**
     * 更新処理
-    *
-    * @param $id
-    * @return 授業編集画面へ移動する
+    * @param $request
     */
     public function doEdit(Request $request) 
     {
@@ -66,7 +66,7 @@ class ProfileController extends Controller
     }
 
     /**
-    * 編集処理
+    * パスワードリセット処理
     */
     public function resetPassword() 
     {
@@ -74,9 +74,11 @@ class ProfileController extends Controller
         $display['heading'] = "Password Reset";
         $display['button'] = "Update";
         $id = Auth::user()->id;
+
         // IDに該当する授業情報を取得する
         $data = User::where('id', '=', $id)->find($id);
-        // 授業データは存在しない場合一覧画面へ移動する
+        
+        // データは存在しない場合一覧画面へ移動する
         if (!$data) {
             return redirect('/home');
         }
@@ -86,6 +88,7 @@ class ProfileController extends Controller
 
     /**
     * パスワードを変更する
+    * @param $request
     */
     public function doResetPassword(Request $request)
     {

@@ -27,9 +27,6 @@ class SubjectsController extends Controller
 
     /**
     * 科目一覧画面
-    *
-    * @param $request
-    * @return 科目ビュー画面へ移動する
     */
     public function list()
     {
@@ -42,8 +39,7 @@ class SubjectsController extends Controller
 
     /**
     * 科目表示画面
-    *
-    * @param $request
+    * @param $id
     * @return 科目ビュー画面へ移動する
     */
     public function view($id)
@@ -66,9 +62,7 @@ class SubjectsController extends Controller
 
     /**
     * 科目登録画面
-    *
     * @param $request
-    * @return 科目ビュー画面へ移動する
     */
     public function add()
     {
@@ -127,9 +121,7 @@ class SubjectsController extends Controller
 
     /**
     * 更新処理
-    *
-    * @param $id
-    * @return 科目編集画面へ移動する
+    * @param $request
     */
     public function doEdit(SubjectsRequest $request) 
     {
@@ -150,9 +142,6 @@ class SubjectsController extends Controller
 
     /**
     * 科目ークラス関連一覧画面
-    *
-    * @param
-    * @return 一覧画面へ移動する
     */
     public function subjectClassRelList()
     {
@@ -164,15 +153,12 @@ class SubjectsController extends Controller
 
     /**
     * 科目クラス関連登録画面
-    *
-    * @param $request
-    * @return 科目クラス関連画面へ移動する
     */
     public function subjectClassRelAdd()
     {
         $display = array();
         $dataedit = array();
-        $display['heading'] = "Subject Class Combination Register";
+        $display['heading'] = "Subject Class Relation Register";
         $display['button'] = "Register";
 
         // 授業一覧
@@ -184,9 +170,7 @@ class SubjectsController extends Controller
 
     /**
     * 科目クラス関連情報を登録する
-    *
     * @param $request
-    * @return 科目クラス一覧画面へ移動する
     */
     public function subjectClassRelDoAdd(SubjectClassRelationRequest $request) 
     {
@@ -206,9 +190,7 @@ class SubjectsController extends Controller
 
     /**
     * 科目クラス関連更新画面
-    *
-    * @param $request
-    * @return 科目クラス関連画面へ移動する
+    * @param $id
     */
     public function subjectClassRelEdit($id)
     {
@@ -230,13 +212,10 @@ class SubjectsController extends Controller
 
     /**
     * 科目クラス関連情報を更新する
-    *
     * @param $request
-    * @return 科目クラス関連一覧画面へ移動する
     */
     public function subjectClassRelDoEdit(SubjectClassRelationRequest $request) 
     {
-
         // 更新する
         $sub_rel = SubjectClassRelation::findOrFail($request->id);
         $sub_rel->update($request->all());
@@ -254,13 +233,10 @@ class SubjectsController extends Controller
 
     /**
     * 科目クラス関連情報を削除する
-    *
-    * @param $request
-    * @return 科目クラス関連一覧画面へ移動する
+    * @param id, valid_flg
     */
     public function subjectClassRelDoDel($id, $valid_flg) 
     {
-
         // 削除する
         $sub_rel = SubjectClassRelation::findOrFail($id);
         $sub_rel->update(['valid_flg' => $valid_flg]);
@@ -281,9 +257,9 @@ class SubjectsController extends Controller
     }
 
     /*配列の最初の値を空気でセットする*/
-    private function setList($query) {
+    private function setList($listArr) {
         $data = array();
-        foreach ($query as $key => $value) {
+        foreach ($listArr as $key => $value) {
             $data[''] = "";
             $data[$key] = $value;
         }

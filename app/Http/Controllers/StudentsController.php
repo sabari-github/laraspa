@@ -35,9 +35,7 @@ class StudentsController extends Controller
 
     /**
     * 学生表示画面
-    *
-    * @param $id
-    * @return 学生ビュー画面へ移動する
+    * @param id
     */
     public function view($id)
     {
@@ -78,9 +76,7 @@ class StudentsController extends Controller
 
     /**
     * 学生情報を登録する
-    *
     * @param $request
-    * @return 学生ビュー画面へ移動する
     */
     public function doAdd(StudentsRequest $request) 
     {
@@ -101,9 +97,7 @@ class StudentsController extends Controller
 
     /**
     * 編集処理
-    *
     * @param $id
-    * @return 学生編集画面へ移動する
     */
     public function edit($id)
     {
@@ -128,9 +122,7 @@ class StudentsController extends Controller
 
     /**
     * 更新処理
-    *
-    * @param $id
-    * @return 学生編集画面へ移動する
+    * @param $request
     */
     public function doEdit(StudentsRequest $request) 
     {
