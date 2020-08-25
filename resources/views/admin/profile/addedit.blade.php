@@ -18,7 +18,6 @@
                         <span class="text-danger">*</span>
                         <div class="col-md-6">
                             <input id="name" type="text" class="col-md-7 form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name',  isset($data->name) ? $data->name : null) }}" required autocomplete="name" autofocus>
-
                             @error('name')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -40,7 +39,7 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="default" class="col-md-4 col-form-label text-md-right">{{ __('Gender') }}</label>
+                        <label for="default" class="col-md-4 col-form-label text-md-right">{{ __('Gender') }}</label><span class="text-danger">&nbsp</span>
                         <div class="col-md-6 mt-2">
                             {{ Form::radio('gender', '0', old('gender',  isset($data->gender) ? $data->gender : null) , array('id' =>'gender','name' => 'gender')) }}
                             &nbsp{{ trans('Male') }}&nbsp
@@ -58,6 +57,7 @@
                     </div>
                     <div class="form-group row">
                         {!! Form::label('title', 'DOB', array('for'=>'dob', 'class' => 'col-md-4 col-form-label text-md-right') ) !!}
+                        <span class="text-danger">&nbsp</span>
                         <div class="col-md-6">
                             {{ Form::date('dob', old('dob',  isset($data->dob) ? $data->dob : null), array('id' => 'dob','class' => 'form-control col-md-6')) }}
 

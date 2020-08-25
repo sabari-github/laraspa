@@ -1684,6 +1684,7 @@ pre code {
   width: 100%;
   margin-bottom: 1rem;
   color: #212529;
+  border-bottom: 1px solid #dee2e6;
 }
 .table th,
 .table td {
@@ -1694,6 +1695,8 @@ pre code {
 .table thead th {
   vertical-align: bottom;
   border-bottom: 2px solid #dee2e6;
+  text-align: center;
+  background-color: #ccc;
 }
 .table tbody + tbody {
   border-top: 2px solid #dee2e6;
@@ -1701,7 +1704,8 @@ pre code {
 
 .table-sm th,
 .table-sm td {
-  padding: 0.3rem;
+  text-align: center;
+  padding: 0.2rem;
 }
 
 .table-bordered {
@@ -10264,4 +10268,11 @@ body {
 }
 .sb-sidenav-light .sb-sidenav-footer {
   background-color: #e9ecef;
+}
+
+/*Common*/
+
+/*css for disable the input,text,select*/
+.disable-input {
+  background-color:#ccc !important;pointer-events: none !important;
 }

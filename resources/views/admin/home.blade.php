@@ -4,7 +4,7 @@
 <script type="text/javascript" src="{{ asset('resources/assets/js/chartv2.8.0.js') }}"></script>
 <h1>{{ $display['heading'] }}</h1>
 <ol class="breadcrumb mb-4">
-    <li class="breadcrumb-item"><a href="index.html"><i class="fas fa-tachometer-alt mr-1"></i>{{ trans('messages.lbl_dashboard') }}</a></li>
+    <li class="breadcrumb-item"><i class="fas fa-tachometer-alt mr-1"></i>{{ trans('messages.lbl_dashboard') }}</li>
     <li class="breadcrumb-item active">{{ $display['heading'] }}</li>
 </ol>
 <div class="row">

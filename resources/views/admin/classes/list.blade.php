@@ -27,12 +27,12 @@
         <tbody>
             @foreach($data as $key => $list)
                 <tr>
-                    <td class="text-center">{{ $key+1 }}</td>
-                    <td>{{ $list->class_name }}</td>
+                    <td>{{ $key+1 }}</td>
+                    <td class="text-left">{{ $list->class_name }}</td>
                     <td>{{ $list->class_name_numeric }}</td>
                     <td>{{ $list->section }}</td>
                     <td>{{ $list->created_at }}</td>
-                    <td class="text-center">
+                    <td>
                         <a href="{{ route('classes.edit', $list->id) }}"><i class="fas fas fa-edit mr-1"></i></a>
                     </td>
                 </tr>

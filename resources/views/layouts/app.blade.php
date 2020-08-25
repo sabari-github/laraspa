@@ -5,16 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
     <title>{{ config('app.name', 'SPA') }}</title>
-
     <!-- Scripts -->
     <script type="text/javascript" src="{{ asset('resources/assets/js/libs/jquery.js') }}"></script>
-
     <!-- Styles -->
-    <!-- nav bar top and left -->
     <link href="{{ asset('resources/assets/css/styles.css') }}" rel="stylesheet">
-
 </head>
 <body @guest class="sb-nav-fixed sb-sidenav-toggled" @else class="sb-nav-fixed" @endguest>
     <nav class="sb-topnav navbar navbar-expand navbar-light bg-light">
@@ -127,7 +122,7 @@
                     </div>
                 </div>
                 <!-- <div class="sb-sidenav-footer">
-                    <div class="small">Logged in duration:</div>
+                    <div class="small"></div>
                 </div> -->
             </nav>
         </div>

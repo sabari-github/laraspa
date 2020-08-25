@@ -29,7 +29,7 @@
             @foreach($data as $key => $list)
                 <tr>
                     <td>{{ $data->firstItem()+$key }}</td>
-                    <td>
+                    <td class="text-left">
                         <a href="{{ route('students.view', $list->student_id) }}">
                             {{ $list->student_name }}
                         </a>

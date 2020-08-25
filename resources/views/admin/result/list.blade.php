@@ -27,15 +27,15 @@
         <tbody>
             @foreach($data as $key => $list)
                 <tr>
-                    <td class="text-center">{{ $key+1 }}</td>
-                    <td>
+                    <td>{{ $key+1 }}</td>
+                    <td class="text-left">
                         <a href="{{ route('result.view', $list->student_id) }}">
                             {{ $list->student_name }}
                         </a>
                     </td>
                     <td>{{ $list->roll_no }}</td>
                     <td>{{ $list->class_name }}</td>
-                    <td class="text-center">{{ $list->created_at }}</td>
+                    <td>{{ $list->created_at }}</td>
                     <td>
                         @if($list->valid_flg == "0")
                             {{ "Active" }}
@@ -43,7 +43,7 @@
                             {{ "Not Active" }}
                         @endif
                     </td>
-                    <td class="text-center">
+                    <td>
                         <a href="{{ route('result.edit', $list->student_id) }}"><i class="fas fas fa-edit mr-1"></i></a>
                     </td>
                 </tr>

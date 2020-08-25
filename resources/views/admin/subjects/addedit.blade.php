@@ -23,56 +23,54 @@
                                     'method' => 'POST')) }}
                     @php $disable = "" @endphp
                 @endif
-
-                    @csrf
-
-                    <div class="form-group row">
-                        {!! Form::label('title', 'Subject Name', array('for'=>'subject_name', 'class' => 'col-md-4 col-form-label text-md-right') ) !!}
-                        <span class="text-danger">*</span>
-                        <div class="col-md-6">
-                            <input id="subject_name" type="text" class="form-control col-md-8 @error('subject_name') is-invalid @enderror" name="subject_name" value="{{ old('subject_name',  isset($data->subject_name) ? $data->subject_name : null) }}"  autocomplete="subject_name" autofocus>
-
-                            @error('subject_name')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
-                        </div>
+                @csrf
+                <div class="form-group row">
+                    {!! Form::label('title', 'Subject Name', array('for'=>'subject_name', 'class' => 'col-md-4 col-form-label text-md-right') ) !!}
+                    <span class="text-danger">*</span>
+                    <div class="col-md-6">
+                        <input id="subject_name" type="text" class="form-control col-md-8 @error('subject_name') is-invalid @enderror" name="subject_name" value="{{ old('subject_name',  isset($data->subject_name) ? $data->subject_name : null) }}"  autocomplete="subject_name" autofocus>
+                        @error('subject_name')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
                     </div>
-                    <div class="form-group row">
-                        {!! Form::label('title', 'Subject Code', array('for'=>'subject_code', 'class' => 'col-md-4 col-form-label text-md-right') ) !!}
-                        <span class="text-danger">*</span>
-                        <div class="col-md-6">
-                            <input id="subject_code" type="text" class="form-control col-md-8 @error('subject_code') is-invalid @enderror" name="subject_code" value="{{ old('subject_code',  isset($data->subject_code) ? $data->subject_code : null) }}"  autocomplete="subject_code" autofocus>
+                </div>
+                <div class="form-group row">
+                    {!! Form::label('title', 'Subject Code', array('for'=>'subject_code', 'class' => 'col-md-4 col-form-label text-md-right') ) !!}
+                    <span class="text-danger">*</span>
+                    <div class="col-md-6">
+                        <input id="subject_code" type="text" class="form-control col-md-8 @error('subject_code') is-invalid @enderror" name="subject_code" value="{{ old('subject_code',  isset($data->subject_code) ? $data->subject_code : null) }}"  autocomplete="subject_code" autofocus>
 
-                            @error('subject_code')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
-                        </div>
+                        @error('subject_code')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
                     </div>
-                    <!-- 編集の場合 -->
-                    @if(isset($data))
-                    <div class="form-group row">
-                        {!! Form::label('title', 'Status', array('for'=>'status', 'class' => 'col-md-4 col-form-label text-md-right') ) !!}
-                        <div class="col-md-6 mt-2">
-                            {{ Form::radio('valid_flg', '0', old('valid_flg',  isset($dataedit->valid_flg) ? $dataedit->valid_flg : null) , array('id' =>'valid_flg','name' => 'valid_flg')) }}
-                            &nbsp{{ trans('Use') }}&nbsp
-                            {{ Form::radio('valid_flg', '1', old('valid_flg',  isset($dataedit->valid_flg) ? $dataedit->valid_flg : null) , array('id' =>'valid_flg','name' => 'valid_flg')) }}
-                            &nbsp{{ trans('Not Use') }}&nbsp
-                        </div>
+                </div>
+                <!-- 編集の場合 -->
+                @if(isset($data))
+                <div class="form-group row">
+                    {!! Form::label('title', 'Status', array('for'=>'status', 'class' => 'col-md-4 col-form-label text-md-right') ) !!}
+                    <span class="text-danger">&nbsp</span>
+                    <div class="col-md-6 mt-2">
+                        {{ Form::radio('valid_flg', '0', old('valid_flg',  isset($dataedit->valid_flg) ? $dataedit->valid_flg : null) , array('id' =>'valid_flg','name' => 'valid_flg')) }}
+                        &nbsp{{ trans('Use') }}&nbsp
+                        {{ Form::radio('valid_flg', '1', old('valid_flg',  isset($dataedit->valid_flg) ? $dataedit->valid_flg : null) , array('id' =>'valid_flg','name' => 'valid_flg')) }}
+                        &nbsp{{ trans('Not Use') }}&nbsp
                     </div>
-                    @endif
-                    <hr>
-                    <div class="form-group row">
-                        <div class="col-md-12">
-                            <center>
-                                <button type="button" name="button" class="btn btn-outline-success" onclick="formSubmit('{{ $display['button']}}');">{{ $display['button'] }}</button>
-                                <button type="button" class="btn btn-outline-dark page-return" data-href="{{ route('subjects.list') }}" data-act="Cancel">Cancel</button>
-                            </center>
-                        </div>
+                </div>
+                @endif
+                <hr>
+                <div class="form-group row">
+                    <div class="col-md-12">
+                        <center>
+                            <button type="button" name="button" class="btn btn-outline-success" onclick="formSubmit('{{ $display['button']}}');">{{ $display['button'] }}</button>
+                            <button type="button" class="btn btn-outline-dark page-return" data-href="{{ route('subjects.list') }}" data-act="Cancel">Cancel</button>
+                        </center>
                     </div>
+                </div>
                 {{ Form::close() }}
             </div>
         </div>

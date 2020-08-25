@@ -27,8 +27,8 @@
         <tbody>
             @foreach($data as $key => $list)
                 <tr>
-                    <td class="text-center">{{ $key+1 }}</td>
-                    <td>
+                    <td>{{ $key+1 }}</td>
+                    <td class="text-left">
                         <a href="{{ route('subjects.view', $list->id) }}">
                             {{ $list->subject_name }}
                         </a>
@@ -36,7 +36,7 @@
                     <td>{{ $list->subject_code }}</td>
                     <td>{{ $list->created_at }}</td>
                     <td>{{ $list->updated_at }}</td>
-                    <td class="text-center">
+                    <td>
                         <a href="{{ route('subjects.edit', $list->id) }}"><i class="fas fas fa-edit mr-1"></i></a>
                     </td>
                 </tr>

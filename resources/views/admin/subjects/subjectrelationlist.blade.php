@@ -17,8 +17,8 @@
         <thead>
             <tr>
                 <th>S.No</th>
-                <th>Class</th>
                 <th>Subject</th>
+                <th>Class</th>
                 <th>Status</th>
                 <th>Action</th>
             </tr>
@@ -27,8 +27,8 @@
             @foreach($data as $key => $list)
                 <tr>
                     <td>{{ $key+1 }}</td>
+                    <td class="text-left">{{ $list->subject_name }}</td>
                     <td>{{ $list->class_section }}</td>
-                    <td>{{ $list->subject_name }}</td>
                     <td>
                         @if($list->valid_flg == "0")
                             <span class="text-success">{{ "Active" }}</span>
