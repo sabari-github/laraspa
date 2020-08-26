@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
 
 // 言語変更
@@ -73,6 +73,4 @@ Route::group(['middleware' => 'auth'], function() {
     Route::post('admin/result/doEdit', 'ResultController@doEdit')->name('result.doEdit');
     Route::any('admin/result/getstudent', 'ResultController@getStudentInfo')->name('result.getstudent');
     Route::any('admin/result/chkStuResult', 'ResultController@chkStuResultInfo')->name('result.chkStuResult');
-    // Route::any('admin/result/getStuSubjectInfo', 'ResultController@getStuSubjectInfo')->name('result.stuSubjectInfo');
-
 });

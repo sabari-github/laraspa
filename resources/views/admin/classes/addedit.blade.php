@@ -10,15 +10,6 @@
 <div class="row">
     <div class="col-md-12">
         <div class="panel">
-            <!-- @if ($errors->any())
-                <div class="alert alert-danger">
-                    <ul>
-                        @foreach ($errors->all() as $error)
-                            <li>{{ $error }}</li>
-                        @endforeach
-                    </ul>
-                </div>
-            @endif -->
             <div class="panel-body">
                 @if(isset($data))
                     {{ Form::model($data, array('name'=>'formclasses','id'=>'formclasses','files'=>true, 'method' => 'POST','class'=>'form-horizontal','url' => 'admin/classes/doEdit' ) ) }}
@@ -33,7 +24,6 @@
                     @php $disable = "" @endphp
                 @endif
                 @csrf
-
                 <div class="form-group row">
                     <label class="col-md-4 col-form-label text-md-right">{{ __('Class Name') }}
                     </label><span class="text-danger">*</span>
@@ -74,7 +64,7 @@
                 <div class="form-group row">
                     <div class="col-md-12">
                         <center>
-                            <button type="button" name="button" class="btn btn-outline-success" onclick="formSubmit('{{ $display['button']}}');">{{ $display['button'] }}</button>
+                            <button type="button" name="button" class="btn btn-outline-success" onclick="formSubmit('{{ $display['button_act']}}');">{{ $display['button'] }}</button>
                             <button type="button" class="btn btn-outline-dark page-return" data-href="{{ route('classes.list') }}" data-act="Cancel">{{ trans('messages.lbl_cancel') }}</button>
                         </center>
                     </div>

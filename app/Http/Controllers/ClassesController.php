@@ -72,6 +72,7 @@ class ClassesController extends Controller
         $dataedit = array();
         $display['heading'] = "Classes Register";
         $display['button'] = trans('messages.lbl_register');
+        $display['button_act'] = "Register";
 
         return view('admin.classes.addedit', compact('display'));
     }
@@ -109,6 +110,7 @@ class ClassesController extends Controller
         $display = array();
         $display['heading'] = "Class Update";
         $display['button'] = trans('messages.lbl_update');
+        $display['button_act'] = "Update";
 
         // IDに該当する授業情報を取得する
         $data = Classes::where('id', '=', $id)->find($id);

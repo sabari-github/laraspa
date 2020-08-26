@@ -12,7 +12,6 @@
             <div class="panel-body">
                     {{ Form::model($data, array('name'=>'formstudent','id'=>'formstudent','files'=>true, 'method' => 'POST','class'=>'form-horizontal','url' => 'admin/profile/doEdit' ) ) }}
                     @csrf
-
                     <div class="form-group row">
                         <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
                         <span class="text-danger">*</span>
@@ -47,7 +46,6 @@
                             &nbsp{{ trans('Female') }}&nbsp
                             {{ Form::radio('gender', '9', old('gender',  isset($data->gender) ? $data->gender : null) , array('id' =>'gender','name' => 'gender')) }}
                             &nbsp{{ trans('Other') }}&nbsp
-
                             @error('gender')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -60,7 +58,6 @@
                         <span class="text-danger">&nbsp</span>
                         <div class="col-md-6">
                             {{ Form::date('dob', old('dob',  isset($data->dob) ? $data->dob : null), array('id' => 'dob','class' => 'form-control col-md-6')) }}
-
                             @error('dob')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -72,7 +69,7 @@
                     <div class="form-group row">
                         <div class="col-md-12">
                             <center>
-                                <button type="button" name="button" class="btn btn-outline-success" onclick="formSubmit('{{ $display['button']}}');">{{ $display['button'] }}</button>
+                                <button type="button" name="button" class="btn btn-outline-success" onclick="formSubmit('{{ $display['button_act']}}');">{{ $display['button'] }}</button>
                                 <button type="button" class="btn btn-outline-dark page-return" data-href="{{ route('result.list') }}" data-act="Cancel">{{ trans('messages.lbl_cancel') }}</button>
                             </center>
                         </div>

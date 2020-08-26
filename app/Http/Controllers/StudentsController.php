@@ -42,7 +42,6 @@ class StudentsController extends Controller
         $display = array();
         $classlist = array();
         $display['heading'] = "Student View";
-        $display['back'] = "Back";
 
         // 授業一覧
         $classlist = $this->setList(Classes::getClassList());
@@ -67,6 +66,7 @@ class StudentsController extends Controller
         $classlist = array();
         $display['heading'] = "Student Register";
         $display['button'] = trans('messages.lbl_register');;
+        $display['button_act'] = "Register";
 
         // 事業一覧
         $classlist = $this->setList(Classes::getClassList());
@@ -105,6 +105,7 @@ class StudentsController extends Controller
         $classlist = array();
         $display['heading'] = "Student Update";
         $display['button'] = trans('messages.lbl_update');
+        $display['button_act'] = "Update";
 
         // 授業一覧
         $classlist = $this->setList(Classes::getClassList());
@@ -142,9 +143,9 @@ class StudentsController extends Controller
     }
 
     /*配列の最初の値を空気でセットする*/
-    private function setList($query) {
+    private function setList($Arry) {
         $data = array();
-        foreach ($query as $key => $value) {
+        foreach ($Arry as $key => $value) {
             $data[''] = "";
             $data[$key] = $value;
         }

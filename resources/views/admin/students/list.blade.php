@@ -4,12 +4,12 @@
 <h1 class="">{{ $display['heading'] }}</h1>
 <ol class="breadcrumb mb-2">
     <li class="breadcrumb-item"><a href="{{ route('home') }}"><i class="fa fa-home"></i>{{ trans('messages.lbl_home') }}</a></li>
-    <li class="breadcrumb-item">Students</li>
+    <li class="breadcrumb-item">{{ trans('messages.lbl_students') }}</li>
     <li class="breadcrumb-item active">{{ $display['heading'] }}</li>
 </ol>
 <div class="row mb-2">
     <div class="col-sm-12">
-        <a href="{{ route('students.add') }}" class="btn btn-outline-success">{{ trans('messages.lbl_classes') }}</a>
+        <a href="{{ route('students.add') }}" class="btn btn-outline-success">{{ trans('messages.lbl_register') }}</a>
     </div>
 </div>
 <div class="table-responsive">

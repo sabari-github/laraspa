@@ -9,8 +9,8 @@
 </ol>
 <div class="row mb-2">
     <div class="col-sm-12 float-left">
-        <a href="{{ route('result.list') }}" class="btn btn-outline-dark"><i class="fas fas fa-arrow-left mr-1"></i>{{ $display['back'] }}</a>
-        <a href="{{ route('result.edit',$data->student_id) }}" class="btn btn-outline-success"><i class="fas fas fa-edit mr-1"></i>Edit</a>
+        <a href="{{ route('result.list') }}" class="btn btn-outline-dark"><i class="fas fas fa-arrow-left mr-1"></i>{{ trans('messages.lbl_back') }}</a>
+        <a href="{{ route('result.edit',$data->student_id) }}" class="btn btn-outline-success"><i class="fas fas fa-edit mr-1"></i>{{ trans('messages.lbl_edit') }}</a>
     </div>
 </div>
 <div class="card">

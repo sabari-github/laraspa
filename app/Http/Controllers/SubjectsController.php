@@ -68,7 +68,8 @@ class SubjectsController extends Controller
         $display = array();
         $dataedit = array();
         $display['heading'] = "Subject Register";
-        $display['button'] = trans('messages.lbl_register');;
+        $display['button'] = trans('messages.lbl_register');
+        $display['button_act'] = "Register";
 
         return view('admin.subjects.addedit', compact('display'));
     }
@@ -104,6 +105,7 @@ class SubjectsController extends Controller
         $display = array();
         $display['heading'] = "Subject Update";
         $display['button'] = trans('messages.lbl_update');
+        $display['button_act'] = "Update";
 
         // IDに該当する科目情報を取得する
         $data = Subjects::where('id', '=', $id)->find($id);
@@ -156,7 +158,8 @@ class SubjectsController extends Controller
         $display = array();
         $dataedit = array();
         $display['heading'] = "Subject Class Relation Register";
-        $display['button'] = trans('messages.lbl_register');;
+        $display['button'] = trans('messages.lbl_register');
+        $display['button_act'] = "Register";
 
         // 授業一覧
         $classlist = $this->setList(Classes::getClassList());
@@ -195,6 +198,7 @@ class SubjectsController extends Controller
         $dataedit = array();
         $display['heading'] = "Subject Class Relation Edit";
         $display['button'] = trans('messages.lbl_update');
+        $display['button_act'] = "Update";
 
         // 授業一覧
         $classlist = $this->setList(Classes::getClassList());

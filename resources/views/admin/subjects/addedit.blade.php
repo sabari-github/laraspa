@@ -4,7 +4,7 @@
 <h1>{{ $display['heading'] }}</h1>
 <ul class="breadcrumb">
     <li class="breadcrumb-item"><a href="{{ route('home') }}"><i class="fa fa-home"></i>{{ trans('messages.lbl_home') }}</a></li>
-    <li class="breadcrumb-item"><a href="{{ route('subjects.list') }}">{{ 'Subjects' }}</a></li>
+    <li class="breadcrumb-item"><a href="{{ route('subjects.list') }}">{{ trans('messages.lbl_subjects') }}</a></li>
     <li class="breadcrumb-item active">{{ $display['heading'] }}</li>
 </ul>
 <div class="row">
@@ -66,7 +66,7 @@
                 <div class="form-group row">
                     <div class="col-md-12">
                         <center>
-                            <button type="button" name="button" class="btn btn-outline-success" onclick="formSubmit('{{ $display['button']}}');">{{ $display['button'] }}</button>
+                            <button type="button" name="button" class="btn btn-outline-success" onclick="formSubmit('{{ $display['button_act']}}');">{{ $display['button'] }}</button>
                             <button type="button" class="btn btn-outline-dark page-return" data-href="{{ route('subjects.list') }}" data-act="Cancel">{{ trans('messages.lbl_cancel') }}</button>
                         </center>
                     </div>

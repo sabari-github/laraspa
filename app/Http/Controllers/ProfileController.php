@@ -30,10 +30,10 @@ class ProfileController extends Controller
         $display = array();
         $display['heading'] = "Profile Update";
         $display['button'] = trans('messages.lbl_update');
+        $display['button_act'] = "Update";
         $id = Auth::user()->id;
 
         // IDに該当する授業情報を取得する
-
         $data = User::where('id', '=', $id)->find($id);
         // 授業データは存在しない場合一覧画面へ移動する
         if (!$data) {

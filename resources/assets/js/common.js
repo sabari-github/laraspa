@@ -5,17 +5,17 @@ var msg_update = "Do you Want To Update ?";
 
 /* メッセージを確認する */
 function verifyMsg(page) {
-var msg = '';
+    var msg = '';
 
-if (page == "Register") {
-	msg = msg_register;
-} else if(page == "Update") {
-	msg = msg_update;
-} else if(page == "Cancel") {
-	msg = msg_cancel;
-}
+    if (page == "Register") {
+    	msg = msg_register;
+    } else if(page == "Update") {
+    	msg = msg_update;
+    } else if(page == "Cancel") {
+    	msg = msg_cancel;
+    }
 
-return msg;
+    return msg;
 }
 
 /* フォーム提出 */
@@ -34,33 +34,3 @@ $(document).on('click',".page-return",function () {
 	  window.location.href = $(this).data('href');
 	}
 });
-
-/*$(document).on('click', '.delete-btn', function(e) {
-    e.preventDefault();
-    var self = $(this);
-    swal({
-            title: "Delete?",
-            text: "Are you sure you want to delete this category?",
-            type: "warning",
-            showCancelButton: true,
-            confirmButtonColor: "#DD6B55",
-            confirmButtonText: "Yes, delete it!",
-            closeOnConfirm: true
-        },
-        function(isConfirm){
-            if(isConfirm){
-                swal("Deleted!","Category deleted", "success");
-                setTimeout(function() {
-                    self.parents(".delete_form").submit();
-                }, 1000);
-            }
-            else{
-                swal("cancelled","Your category is safe", "error");
-            }
-        });
-});*/
-// $(document).ready(function() {
-//     $(".onchange-class").on('change', function(e){
-//         alert();
-//     });
-// });

@@ -66,7 +66,8 @@ class ResultController extends Controller
         $display = array();
         $classlist = array();
         $display['heading'] = "Result Register";
-        $display['button'] = trans('messages.lbl_register');;
+        $display['button'] = trans('messages.lbl_register');
+        $display['button_act'] = "Register";
 
         // 事業一覧
         $classlist = $this->setList(Classes::getClassList());
@@ -147,6 +148,7 @@ class ResultController extends Controller
         $classlist = array();
         $display['heading'] = "Result Update";
         $display['button'] = trans('messages.lbl_update');
+        $display['button_act'] = "Update";
 
         // 授業一覧
         $classlist = $this->setList(Classes::getClassList());
@@ -195,10 +197,13 @@ class ResultController extends Controller
         return redirect()->route('result.list')->with($type, $message);
     }
 
-    /*配列の最初の値を空気でセットする*/
-    private function setList($query) {
+    /**
+    * 配列の最初の値を空気でセットする
+    * @param Array $listArr
+    */
+    private function setList($listArr) {
         $data = array();
-        foreach ($query as $key => $value) {
+        foreach ($listArr as $key => $value) {
             $data[''] = "";
             $data[$key] = $value;
         }

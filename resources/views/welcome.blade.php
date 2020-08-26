@@ -69,7 +69,7 @@
                         <a href="{{ route('login') }}">Login</a>
 
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}">{{ trans('messages.lbl_classes') }}</a>
+                            <a href="{{ route('register') }}">{{ trans('messages.lbl_register') }}</a>
                         @endif
                     @endauth
                 </div>

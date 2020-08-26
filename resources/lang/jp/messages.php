@@ -28,16 +28,19 @@ return [
 	'lbl_school_progress_app' => "学校進学アプリ",
 
     // Common
-	'lbl_login'     => 'ログイン',
+	'lbl_login' => 'ログイン',
     'lbl_email_address' => 'メールアドレス',
-    'lbl_password'     => 'パスワード',
-    'lbl_name'     => '名前',
-    'lbl_register'     => '登録',
-    'lbl_confirm_password'     => '確認パスワード',
-    'lbl_forgot_password'     => 'Forgot Password',
-    'lbl_reset_password'     => 'リセットパスワード',
-    'lbl_cancel'     => 'キャンセル',
+    'lbl_password' => 'パスワード',
+    'lbl_name' => '名前',
+    'lbl_register' => '登録',
+    'lbl_update' => '更新',
+    'lbl_back' => '戻る',
+    'lbl_edit' => '編集',
+    'lbl_cancel' => 'キャンセル',
+    'lbl_confirm_password' => '確認パスワード',
+    'lbl_forgot_password' => 'Forgot Password',
+    'lbl_reset_password' => 'リセットパスワード',
 
     // Class
-    'lbl_class_list'     => '授業一覧',
+    'lbl_class_list' => '授業一覧',
 ];
