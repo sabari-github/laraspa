@@ -6,6 +6,7 @@ return [
     'lbl_students' => '学生',
     'lbl_classes' => '授業',
     'lbl_subjects' => '科目',
+    'lbl_subject' => '科目',
     'lbl_student_list' => '学生一覧',
     'lbl_result_list' => '結果一覧',
     'lbl_subject_list' => '科目一覧',

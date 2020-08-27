@@ -6,6 +6,7 @@ return [
     'lbl_students' => 'Students',
     'lbl_classes' => 'Classes',
     'lbl_subjects' => 'Subjects',
+    'lbl_subject' => 'Subject',
     'lbl_result_list' => 'Result List',
     'lbl_student_list' => 'Student List',
     'lbl_subject_list' => 'Subject List',

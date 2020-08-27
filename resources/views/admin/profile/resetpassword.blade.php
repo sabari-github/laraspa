@@ -25,7 +25,6 @@
                         <span class="text-danger">*</span>
                         <div class="col-md-6">
                             <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
-
                             @error('password')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -44,8 +43,8 @@
                     <div class="form-group row">
                         <div class="col-md-12">
                             <center>
-                                <button type="button" name="button" class="btn btn-success" onclick="formSubmit('{{ $display['button']}}');">{{ $display['button'] }}</button>
-                                <button type="button" class="btn btn-default page-return" data-href="{{ route('result.list') }}" data-act="Cancel">{{ trans('messages.lbl_cancel') }}</button>
+                                <button type="button" name="button" class="btn btn-outline-success" onclick="formSubmit('{{ $display['button_act']}}');">{{ $display['button'] }}</button>
+                                <button type="button" class="btn btn-outline-dark page-return" data-href="{{ route('home') }}" data-act="Cancel">{{ trans('messages.lbl_cancel') }}</button>
                             </center>
                         </div>
                     </div>

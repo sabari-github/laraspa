@@ -8,7 +8,7 @@
 </ol>
 <div class="row mb-2">
     <div class="col-sm-12">
-        <a href="{{ route('result.add') }}" class="btn btn-outline-success">{{ trans('messages.lbl_classes') }}</a>
+        <a href="{{ route('result.add') }}" class="btn btn-outline-success">{{ trans('messages.lbl_register') }}</a>
     </div>
 </div>
 <div class="table-responsive">
