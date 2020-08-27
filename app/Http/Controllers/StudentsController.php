@@ -41,7 +41,7 @@ class StudentsController extends Controller
     {
         $display = array();
         $classlist = array();
-        $display['heading'] = "Student View";
+        $display['heading'] = trans('messages.lbl_student_view');
 
         // 授業一覧
         $classlist = $this->setList(Classes::getClassList());
@@ -64,7 +64,7 @@ class StudentsController extends Controller
     {
         $display = array();
         $classlist = array();
-        $display['heading'] = "Student Register";
+        $display['heading'] = trans('messages.lbl_student_register');
         $display['button'] = trans('messages.lbl_register');;
         $display['button_act'] = "Register";
 
@@ -103,7 +103,7 @@ class StudentsController extends Controller
     {
         $display = array();
         $classlist = array();
-        $display['heading'] = "Student Update";
+        $display['heading'] = trans('messages.lbl_student_update');
         $display['button'] = trans('messages.lbl_update');
         $display['button_act'] = "Update";
 

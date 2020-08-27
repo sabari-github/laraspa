@@ -16,12 +16,12 @@
     <table class="table table-sm table-striped" width="100%" cellspacing="0">
         <thead>
             <tr>
-                <th>S.No</th>
-                <th>Class Name</th>
-                <th>Numeric</th>
-                <th>Section</th>
-                <th>Creation Date</th>
-                <th>Action</th>
+                <th>{{ trans('messages.lbl_sno') }}</th>
+                <th>{{ trans('messages.lbl_class_name') }}</th>
+                <th>{{ trans('messages.lbl_numeric') }}</th>
+                <th>{{ trans('messages.lbl_section') }}</th>
+                <th>{{ trans('messages.lbl_creation_date') }}</th>
+                <th>{{ trans('messages.lbl_action') }}</th>
             </tr>
         </thead>
         <tbody>

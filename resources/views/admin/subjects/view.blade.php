@@ -16,25 +16,25 @@
 <div class="card">
     <div class="card-body">
         <div class="form-group row">
-            <label class="col-md-4 text-md-right">{{ __('Subject Name') }}</label>
+            <label class="col-md-4 text-md-right">{{ trans('messages.lbl_subject_name') }}</label>
             <div class="col-md-6">
                 {{ isset($data->subject_name) ? $data->subject_name : null }}
             </div>
         </div>
         <div class="form-group row">
-            <label class="col-md-4 text-md-right">{{ __('Subject Code') }}</label>
+            <label class="col-md-4 text-md-right">{{ trans('messages.lbl_subject_code') }}</label>
             <div class="col-md-6">
                 {{ isset($data->subject_code) ? $data->subject_code : null }}
             </div>
         </div>
         <div class="form-group row">
-            <label class="col-md-4 text-md-right">{{ __('Registration Date') }}</label>
+            <label class="col-md-4 text-md-right">{{ trans('messages.lbl_creation_date') }}</label>
             <div class="col-md-6">
                 {{$data->created_at}}
             </div>
         </div>
         <div class="form-group row">
-            <label class="col-md-4 text-md-right">{{ __('Updation Date') }}</label>
+            <label class="col-md-4 text-md-right">{{ trans('messages.lbl_updated_date') }}</label>
             <div class="col-md-6">
                 {{$data->updated_at}}
             </div>

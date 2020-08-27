@@ -14,7 +14,7 @@
                     @csrf
 
                     <div class="form-group row">
-                        <label class="col-md-4 text-md-right">{{ __('Email') }}</label>
+                        <label class="col-md-4 text-md-right">{{ trans('messages.lbl_email') }}</label>
                         <span class="text-danger">*</span>
                         <div class="col-md-6">
                             {{$data->email}}

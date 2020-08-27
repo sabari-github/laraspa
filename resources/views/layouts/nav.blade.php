@@ -63,7 +63,7 @@
                 </div>
             </div>
         </main>
-        <footer class="py-1 bg-dark mt-auto">
+        <!-- <footer class="py-1 bg-dark mt-auto">
             <div class="container-fluid">
                 <div class="d-flex align-items-center justify-content-between small">
                     <div class="text-muted">Copyright &copy; SPA 2020</div>
@@ -74,6 +74,6 @@
                     </div>
                 </div>
             </div>
-        </footer>
+        </footer> -->
     </div>
 </div>

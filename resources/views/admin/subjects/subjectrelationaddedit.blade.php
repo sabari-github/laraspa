@@ -24,7 +24,7 @@
                 @endif
                     @csrf
                 <div class="form-group row">
-                    <label for="class_id" class="col-md-4 col-form-label text-md-right">{{ __('Class') }}</label>
+                    <label for="class_id" class="col-md-4 col-form-label text-md-right">{{ trans('messages.lbl_class') }}</label>
                     <span class="text-danger">*</span>
                     <div class="col-md-6">
                         <select name="class_id" id="class_id" class="input-sm col-md-6 form-control @error('class_id') is-invalid @enderror">
@@ -43,7 +43,7 @@
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label class="col-md-4 col-form-label text-md-right">{{ __('Subject') }}</label>
+                    <label class="col-md-4 col-form-label text-md-right">{{ trans('messages.lbl_subject') }}</label>
                     <span class="text-danger">*</span>
                     <div class="col-md-6">
                         <select name="subject_id" id="subject_id" class="input-sm col-md-6 form-control @error('subject_id') is-invalid @enderror">

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>{{ config('app.name', 'SPA') }}</title>
+    <title>{{ "SPA" }}</title>
     <!-- Scripts -->
     <script type="text/javascript" src="{{ asset('resources/assets/js/libs/jquery.js') }}"></script>
     <!-- Styles -->
@@ -19,6 +19,7 @@
 <script type="text/javascript" src="{{ asset('resources/assets/js/navmenu.js') }}"></script>
 <script type="text/javascript" src="{{ asset('resources/assets/js/all.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('resources/assets/js/common.js') }}"></script>
+<!-- Hide Sidebar -->
 @if(!Auth::check())
 <style type="text/css">
 .sb-sidenav-toggled #layoutSidenav #layoutSidenav_nav {display: none;}

@@ -30,7 +30,7 @@ class ResultController extends Controller
     public function list()
     {
         $display = array();
-        $display['heading'] = trans('messages.lbl_student_list');
+        $display['heading'] = trans('messages.lbl_result_list');
         // 結果詳細情報を取得する
         $data = Result::getResultList();
         return view('admin.result.list', compact('data', 'display'));

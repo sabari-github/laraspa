@@ -13,7 +13,7 @@
                     {{ Form::model($data, array('name'=>'formstudent','id'=>'formstudent','files'=>true, 'method' => 'POST','class'=>'form-horizontal','url' => 'admin/profile/doEdit' ) ) }}
                     @csrf
                     <div class="form-group row">
-                        <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
+                        <label for="name" class="col-md-4 col-form-label text-md-right">{{ trans('messages.lbl_name') }}</label>
                         <span class="text-danger">*</span>
                         <div class="col-md-6">
                             <input id="name" type="text" class="col-md-7 form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name',  isset($data->name) ? $data->name : null) }}" required autocomplete="name" autofocus>
@@ -25,7 +25,7 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-md-4 col-form-label text-md-right">{{ __('Email') }}</label>
+                        <label class="col-md-4 col-form-label text-md-right">{{ trans('messages.lbl_email') }}</label>
                         <span class="text-danger">*</span>
                         <div class="col-md-6">
                             <input id="email" type="email" class="form-control col-md-10 @error('email') is-invalid @enderror" name="email" value="{{ old('email',  isset($data->email) ? $data->email : null) }}" required autocomplete="email" autofocus>
@@ -38,7 +38,7 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="default" class="col-md-4 col-form-label text-md-right">{{ __('Gender') }}</label><span class="text-danger">&nbsp</span>
+                        <label for="default" class="col-md-4 col-form-label text-md-right">{{ trans('messages.lbl_gender') }}</label><span class="text-danger">&nbsp</span>
                         <div class="col-md-6 mt-2">
                             {{ Form::radio('gender', '0', old('gender',  isset($data->gender) ? $data->gender : null) , array('id' =>'gender','name' => 'gender')) }}
                             &nbsp{{ trans('Male') }}&nbsp

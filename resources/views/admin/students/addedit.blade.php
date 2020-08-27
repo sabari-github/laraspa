@@ -26,7 +26,7 @@
                 @csrf
 
                 <div class="form-group row">
-                    <label class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
+                    <label class="col-md-4 col-form-label text-md-right">{{ trans('messages.lbl_name') }}</label>
                     <span class="text-danger">*</span>
                     <div class="col-md-6">
                         <input id="student_name" type="text" class="form-control col-md-8 @error('student_name') is-invalid @enderror" name="student_name" value="{{ old('student_name',  isset($dataedit->student_name) ? $dataedit->student_name : null) }}" required autocomplete="student_name" autofocus>
@@ -38,7 +38,7 @@
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label class="col-md-4 col-form-label text-md-right">{{ __('Roll No') }}</label>
+                    <label class="col-md-4 col-form-label text-md-right">{{ trans('messages.lbl_roll_no') }}</label>
                     <span class="text-danger">*</span>
                     <div class="col-md-6">
                         <input id="roll_no" type="text" class="form-control col-md-5 @error('roll_no') is-invalid @enderror" name="roll_no" value="{{ old('roll_no',  isset($dataedit->roll_no) ? $dataedit->roll_no : null) }}" required autocomplete="roll_no" maxlength="12" autofocus>
@@ -50,7 +50,7 @@
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label for="class_id" class="col-md-4 col-form-label text-md-right">{{ __('Class') }}</label>
+                    <label for="class_id" class="col-md-4 col-form-label text-md-right">{{ trans('messages.lbl_class') }}</label>
                     <span class="text-danger">*</span>
                     <div class="col-md-6">
                         <select name="class_id" id="class_id" class="{{$disableInput}} input-sm col-md-6 form-control @error('class_id') is-invalid @enderror">
@@ -69,7 +69,7 @@
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label for="student_email" class="col-md-4 col-form-label text-md-right">{{ __('Email') }}</label><span class="text-danger">&nbsp</span>
+                    <label for="student_email" class="col-md-4 col-form-label text-md-right">{{ trans('messages.lbl_email') }}</label><span class="text-danger">&nbsp</span>
                     <div class="col-md-6">
                         <input id="student_email" type="email" class="form-control col-md-10 @error('student_email') is-invalid @enderror" name="student_email" value="{{ old('student_email',  isset($dataedit->student_email) ? $dataedit->student_email : null) }}" required autocomplete="student_email" autofocus>
                         @error('student_email')
@@ -80,14 +80,14 @@
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label for="default" class="col-md-4 col-form-label text-md-right">{{ __('Gender') }}</label><span class="text-danger">&nbsp</span>
+                    <label for="default" class="col-md-4 col-form-label text-md-right">{{ trans('messages.lbl_gender') }}</label><span class="text-danger">&nbsp</span>
                     <div class="col-md-6 mt-2">
                         {{ Form::radio('gender', '0', old('gender',  isset($dataedit->gender) ? $dataedit->gender : null) , array('id' =>'gender','name' => 'gender')) }}
-                        &nbsp{{ trans('Male') }}&nbsp
+                        &nbsp{{ trans('messages.lbl_male') }}&nbsp
                         {{ Form::radio('gender', '1', old('gender',  isset($dataedit->gender) ? $dataedit->gender : null) , array('id' =>'gender','name' => 'gender')) }}
-                        &nbsp{{ trans('Female') }}&nbsp
+                        &nbsp{{ trans('messages.lbl_female') }}&nbsp
                         {{ Form::radio('gender', '9', old('gender',  isset($dataedit->gender) ? $dataedit->gender : null) , array('id' =>'gender','name' => 'gender')) }}
-                        &nbsp{{ trans('Other') }}&nbsp
+                        &nbsp{{ trans('messages.lbl_others') }}&nbsp
                         @error('gender')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
@@ -96,7 +96,7 @@
                     </div>
                 </div>
                 <div class="form-group row">
-                    {!! Form::label('title', 'DOB', array('for'=>'dob', 'class' => 'col-md-4 col-form-label text-md-right') ) !!}
+                    {!! Form::label('title', trans('messages.lbl_dob'), array('for'=>'dob', 'class' => 'col-md-4 col-form-label text-md-right') ) !!}
                     <span class="text-danger">&nbsp</span>
                     <div class="col-md-6">
                         {{ Form::date('dob', old('dob',  isset($dataedit->dob) ? $dataedit->dob : null), array('id' => 'dob','class' => 'form-control col-md-6')) }}
@@ -109,7 +109,7 @@
                 </div>
                 @if(isset($dataedit))
                 <div class="form-group row">
-                    {!! Form::label('title', 'Status', array('for'=>'status', 'class' => 'col-md-4 col-form-label text-md-right') ) !!}
+                    {!! Form::label('title', trans('messages.lbl_status'), array('for'=>'status', 'class' => 'col-md-4 col-form-label text-md-right') ) !!}
                     <div class="col-md-6 mt-2">
                         {{ Form::radio('valid_flg', '0', old('valid_flg',  isset($dataedit->valid_flg) ? $dataedit->valid_flg : null) , array('id' =>'valid_flg','name' => 'valid_flg')) }}
                         &nbsp{{ trans('Active') }}&nbsp

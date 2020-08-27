@@ -18,10 +18,10 @@
                             <div class="links">
                                 @if (Route::has('login'))
                                 @auth
-                                    <a class="btn btn-outline-secondary p-2" href="{{ url('/home') }}">Home</a>
+                                    <a class="btn btn-outline-secondary p-2" href="{{ url('/home') }}">{{ trans('messages.lbl_home') }}</a>
                                 @else
-                                    <a class="btn btn-outline-secondary p-2" href="{{ route('login') }}">Teacher</a>
-                                    <a class="btn btn-outline-secondary p-2" href="#">Student</a>
+                                    <a class="btn btn-outline-primary p-2" href="{{ route('login') }}">{{ trans('messages.lbl_teacher') }}</a>
+                                    <a class="btn btn-outline-secondary p-2" onclick="(alert('作成中'));" href="#">{{ trans('messages.lbl_student') }}</a>
                                     <!-- @if (Route::has('register'))
                                         <a href="{{ route('register') }}">{{ trans('messages.lbl_register') }}</a>
                                     @endif -->
@@ -33,8 +33,8 @@
                 </div>
             </div>
         </div>
-        <div class="flex-center position-ref full-height">
-            <!-- @if (Route::has('login'))
+        <!-- <div class="flex-center position-ref full-height">
+            @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
                         <a href="{{ url('/home') }}">Home</a>
@@ -45,8 +45,8 @@
                         @endif
                     @endauth
                 </div>
-            @endif -->
-        </div>
+            @endif
+        </div> -->
     </body>
 </html>
 <script type="text/javascript" src="{{ asset('resources/assets/js/libs/bootstrap.bundle.min.js') }}"></script>

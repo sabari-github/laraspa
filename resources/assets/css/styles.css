@@ -82,7 +82,8 @@ hr {
 
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0;
+  color: #686868;
 }
 
 p {
@@ -1705,7 +1706,7 @@ pre code {
 .table-sm th,
 .table-sm td {
   text-align: center;
-  padding: 0.2rem;
+  padding: 0.1rem;
 }
 
 .table-bordered {
@@ -1727,7 +1728,7 @@ pre code {
   border: 0;
 }
 
-.table-striped tbody tr:nth-of-type(odd) {
+.table-striped tbody tr:nth-of-type(even) {
   background-color: rgba(0, 0, 0, 0.05);
 }
 
@@ -1933,7 +1934,7 @@ pre code {
 .table-dark.table-bordered {
   border: 0;
 }
-.table-dark.table-striped tbody tr:nth-of-type(odd) {
+.table-dark.table-striped tbody tr:nth-of-type(even) {
   background-color: rgba(255, 255, 255, 0.05);
 }
 .table-dark.table-hover tbody tr:hover {
@@ -10108,7 +10109,6 @@ body {
 }
 .sb-nav-fixed .sb-topnav {
   z-index: 1039;
-  border-bottom: 5px solid #007bff;
 }
 .sb-nav-fixed #layoutSidenav #layoutSidenav_nav {
   width: 225px;
@@ -10119,6 +10119,7 @@ body {
   padding-top: 56px;
 }
 .sb-nav-fixed #layoutSidenav #layoutSidenav_nav .sb-sidenav .sb-sidenav-menu {
+  /*background-color: #007bff30;*/
   overflow-y: auto;
 }
 .sb-nav-fixed #layoutSidenav #layoutSidenav_content {
@@ -10152,6 +10153,7 @@ body {
   padding-left: 0;
   height: 56px;
   z-index: 1039;
+  border-bottom: 5px solid #007bff;
 }
 .sb-topnav .navbar-brand {
   width: 225px;
@@ -10213,7 +10215,8 @@ body {
 }
 
 .sb-sidenav-dark {
-  background-color: #212529;
+  background-color: #383c40;
+  /*background-color: #212529;*/
   color: rgba(255, 255, 255, 0.5);
 }
 .sb-sidenav-dark .sb-sidenav-menu .sb-sidenav-menu-heading {
@@ -10275,4 +10278,8 @@ body {
 /*css for disable the input,text,select*/
 .disable-input {
   background-color:#ccc !important;pointer-events: none !important;
+}
+
+.clr_black {
+  color: grey;
 }

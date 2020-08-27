@@ -16,13 +16,13 @@
     <table class="table table-sm table-striped" width="100%" cellspacing="0">
         <thead>
             <tr>
-                <th>S.No</th>
-                <th>Name</th>
-                <th>Roll No</th>
-                <th>Class</th>
-                <th>Gender</th>
-                <th>Status</th>
-                <th>Action</th>
+                <th>{{ trans('messages.lbl_sno') }}</th>
+                <th>{{ trans('messages.lbl_name') }}</th>
+                <th>{{ trans('messages.lbl_roll_no') }}</th>
+                <th>{{ trans('messages.lbl_class') }}</th>
+                <th>{{ trans('messages.lbl_gender') }}</th>
+                <th>{{ trans('messages.lbl_status') }}</th>
+                <th>{{ trans('messages.lbl_action') }}</th>
             </tr>
         </thead>
         <tbody>

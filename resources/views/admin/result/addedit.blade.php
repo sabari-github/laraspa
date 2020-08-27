@@ -29,7 +29,7 @@
                 @if(isset($data))
                 <!-- 更新の場合は -->
                 <div class="form-group row">
-                    <label class="col-md-4  text-md-right">{{ __('Class') }}</label>
+                    <label class="col-md-4  text-md-right">{{ trans('messages.lbl_class') }}</label>
                     <div class="col-md-6">
                         {{$data->class_name}}
                     </div>
@@ -43,7 +43,7 @@
                 @else
                 <!-- 登録の場合は -->
                 <div class="form-group row">
-                    <label class="col-md-4 col-form-label text-md-right">{{ __('Class') }}</label>
+                    <label class="col-md-4 col-form-label text-md-right">{{ trans('messages.lbl_class') }}</label>
                     <span class="text-danger">*</span>
                     <div class="col-md-6">
                         <select name="class_id" id="class_id" class="{{$disableInput}} input-sm col-md-6 form-control @error('class_id') is-invalid @enderror onchange-class">

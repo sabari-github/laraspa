@@ -16,31 +16,31 @@
 <div class="card">
     <div class="card-body">
         <div class="form-group row">
-            <label for="student_name" class="col-md-4 text-md-right">{{ __('Name') }}</label>
+            <label for="student_name" class="col-md-4 text-md-right">{{ trans('messages.lbl_name') }}</label>
             <div class="col-md-6">
                 {{ isset($dataedit->student_name) ? $dataedit->student_name : null }}
             </div>
         </div>
         <div class="form-group row">
-            <label class="col-md-4 text-md-right">{{ __('Roll No') }}</label>
+            <label class="col-md-4 text-md-right">{{ trans('messages.lbl_roll_no') }}</label>
             <div class="col-md-6">
                 {{ isset($dataedit->roll_no) ? $dataedit->roll_no : null }}
             </div>
         </div>
         <div class="form-group row">
-            <label class="col-md-4 text-md-right">{{ __('Class') }}</label>
+            <label class="col-md-4 text-md-right">{{ trans('messages.lbl_class') }}</label>
             <div class="col-md-6">
                 {{ isset($dataedit->class_id) ? $classlist[$dataedit->class_id] : null }}
             </div>
         </div>
         <div class="form-group row">
-            <label class="col-md-4 text-md-right">{{ __('DOB') }}</label>
+            <label class="col-md-4 text-md-right">{{ trans('messages.lbl_dob') }}</label>
             <div class="col-md-6">
                 {{ isset($dataedit->dob) ? $dataedit->dob : null }}
             </div>
         </div>
         <div class="form-group row">
-            <label class="col-md-4 text-md-right">{{ __('Gender') }}</label>
+            <label class="col-md-4 text-md-right">{{ trans('messages.lbl_gender') }}</label>
             <div class="col-md-6">
                 @if(isset($dataedit->gender) && $dataedit->gender == '0')
                     {{ "Male" }}
@@ -52,13 +52,13 @@
             </div>
         </div>
         <div class="form-group row">
-            <label class="col-md-4 text-md-right">{{ __('Email') }}</label>
+            <label class="col-md-4 text-md-right">{{ trans('messages.lbl_email') }}</label>
             <div class="col-md-6">
                 {{ isset($dataedit->student_email) ? $dataedit->student_email : null }}
             </div>
         </div>
         <div class="form-group row">
-            <label class="col-md-4 text-md-right">{{ __('Status') }}</label>
+            <label class="col-md-4 text-md-right">{{ trans('messages.lbl_status') }}</label>
             <div class="col-md-6">
                 @if(isset($dataedit->valid_flg) && $dataedit->valid_flg == '0')
                     {{ "Active" }}
@@ -68,7 +68,7 @@
             </div>
         </div>
         <div class="form-group row">
-            <label class="col-md-4 text-md-right">{{ __('Registration Date') }}</label>
+            <label class="col-md-4 text-md-right">{{ trans('messages.lbl_creation_date') }}</label>
             <div class="col-md-6">
                 {{$dataedit->created_at}}
             </div>

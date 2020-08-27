@@ -4,7 +4,7 @@
 <h1>{{ $display['heading'] }}</h1>
 <ol class="breadcrumb mb-2">
     <li class="breadcrumb-item"><a href="{{ route('home') }}"><i class="fa fa-home"></i>{{ trans('messages.lbl_home') }}</a></li>
-    <li class="breadcrumb-item">Subjects</li>
+    <li class="breadcrumb-item">{{ trans('messages.lbl_subjects') }}</li>
     <li class="breadcrumb-item active">{{ $display['heading'] }}</li>
 </ol>
 <div class="row mb-2">
@@ -16,11 +16,11 @@
     <table class="table table-sm table-striped" width="100%" cellspacing="0">
         <thead>
             <tr>
-                <th>S.No</th>
-                <th>Subject</th>
-                <th>Class</th>
-                <th>Status</th>
-                <th>Action</th>
+                <th>{{ trans('messages.lbl_sno') }}</th>
+                <th>{{ trans('messages.lbl_subject') }}</th>
+                <th>{{ trans('messages.lbl_class') }}</th>
+                <th>{{ trans('messages.lbl_status') }}</th>
+                <th>{{ trans('messages.lbl_action') }}</th>
             </tr>
         </thead>
         <tbody>

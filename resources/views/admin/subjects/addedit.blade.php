@@ -25,7 +25,7 @@
                 @endif
                 @csrf
                 <div class="form-group row">
-                    {!! Form::label('title', 'Subject Name', array('for'=>'subject_name', 'class' => 'col-md-4 col-form-label text-md-right') ) !!}
+                    {!! Form::label('title', trans('messages.lbl_subject_name'), array('for'=>'subject_name', 'class' => 'col-md-4 col-form-label text-md-right') ) !!}
                     <span class="text-danger">*</span>
                     <div class="col-md-6">
                         <input id="subject_name" type="text" class="form-control col-md-8 @error('subject_name') is-invalid @enderror" name="subject_name" value="{{ old('subject_name',  isset($data->subject_name) ? $data->subject_name : null) }}"  autocomplete="subject_name" autofocus>
@@ -37,7 +37,7 @@
                     </div>
                 </div>
                 <div class="form-group row">
-                    {!! Form::label('title', 'Subject Code', array('for'=>'subject_code', 'class' => 'col-md-4 col-form-label text-md-right') ) !!}
+                    {!! Form::label('title', trans('messages.lbl_subject_code'), array('for'=>'subject_code', 'class' => 'col-md-4 col-form-label text-md-right') ) !!}
                     <span class="text-danger">*</span>
                     <div class="col-md-6">
                         <input id="subject_code" type="text" class="form-control col-md-8 @error('subject_code') is-invalid @enderror" name="subject_code" value="{{ old('subject_code',  isset($data->subject_code) ? $data->subject_code : null) }}"  autocomplete="subject_code" autofocus>
@@ -52,13 +52,13 @@
                 <!-- 編集の場合 -->
                 @if(isset($data))
                 <div class="form-group row">
-                    {!! Form::label('title', 'Status', array('for'=>'status', 'class' => 'col-md-4 col-form-label text-md-right') ) !!}
+                    {!! Form::label('title', trans('messages.lbl_status'), array('for'=>'status', 'class' => 'col-md-4 col-form-label text-md-right') ) !!}
                     <span class="text-danger">&nbsp</span>
                     <div class="col-md-6 mt-2">
-                        {{ Form::radio('valid_flg', '0', old('valid_flg',  isset($dataedit->valid_flg) ? $dataedit->valid_flg : null) , array('id' =>'valid_flg','name' => 'valid_flg')) }}
-                        &nbsp{{ trans('Use') }}&nbsp
-                        {{ Form::radio('valid_flg', '1', old('valid_flg',  isset($dataedit->valid_flg) ? $dataedit->valid_flg : null) , array('id' =>'valid_flg','name' => 'valid_flg')) }}
-                        &nbsp{{ trans('Not Use') }}&nbsp
+                        <label class="clr_black">{{ Form::radio('valid_flg', '0', old('valid_flg',  isset($dataedit->valid_flg) ? $dataedit->valid_flg : null) , array('id' =>'valid_flg','name' => 'valid_flg')) }}
+                        &nbsp{{ trans('messages.lbl_use') }}</label>&nbsp
+                        <label class="clr_black">{{ Form::radio('valid_flg', '1', old('valid_flg',  isset($dataedit->valid_flg) ? $dataedit->valid_flg : null) , array('id' =>'valid_flg','name' => 'valid_flg')) }}
+                        &nbsp{{ trans('messages.lbl_not_use') }}</label>
                     </div>
                 </div>
                 @endif

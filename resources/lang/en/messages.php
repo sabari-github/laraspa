@@ -5,6 +5,7 @@ return [
     'lbl_student' => 'Student',
     'lbl_students' => 'Students',
     'lbl_classes' => 'Classes',
+    'lbl_class' => 'Class',
     'lbl_subjects' => 'Subjects',
     'lbl_subject' => 'Subject',
     'lbl_result_list' => 'Result List',
@@ -30,6 +31,7 @@ return [
 
     // Common
 	'lbl_login' => 'Login',
+    'lbl_logout' => 'Logout',
     'lbl_email_address' => 'E-Mail Address',
     'lbl_password' => 'Password',
     'lbl_name' => 'Name',
@@ -41,7 +43,41 @@ return [
     'lbl_confirm_password' => 'Confirm Password',
     'lbl_forgot_password' => 'Forgot Password',
     'lbl_reset_password' => 'Reset Password',
+    'lbl_sno' => 'S.No',
+    'lbl_action' => 'Action',
+    'lbl_creation_date' => 'Creation Date',
+    'lbl_updated_date' => 'Updated Date',
+    'lbl_status' => 'Status',
+    'lbl_email' => 'Email',
+    'lbl_use' => 'Use',
+    'lbl_not_use' => 'Not Use',
+    'lbl_teacher' => 'Teacher',
+    'lbl_underconstruction' => 'Under construction',
 
     // Class
     'lbl_class_list' => 'Class List',
+    'lbl_class_register' => 'Class Register',
+    'lbl_class_name' => 'Class Name',
+    'lbl_numeric' => 'Numeric',
+    'lbl_class_in_numeric' => 'Class in Numeric',
+    'lbl_section' => 'Section',
+    'lbl_dob' => 'DOB',
+    'lbl_male' => 'Male',
+    'lbl_female' => 'Female',
+    'lbl_others' => 'Others',
+    'lbl_class_register' => 'Class Register',
+    'lbl_class_register' => 'Class Update',
+
+    // Subject
+    'lbl_subject_name' => 'Subject Name',
+    'lbl_subject_code' => 'Subject Code',
+
+    //Students
+    'lbl_student_view' => 'Student View',
+    'lbl_student_register' => 'Student Register',
+    'lbl_student_update' => 'Student Update',
+    'lbl_name' => 'Name',
+    'lbl_student_name' => 'Student Name',
+    'lbl_roll_no' => 'Roll No',
+    'lbl_gender' => 'Gender',
 ];

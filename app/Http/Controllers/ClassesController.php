@@ -38,29 +38,6 @@ class ClassesController extends Controller
     }
 
     /**
-    * 授業表示画面
-    *
-    * @param $request
-    * @return 授業ビュー画面へ移動する
-    */
-    public function view($id)
-    {
-        $display = array();
-        $display['heading'] = "Subject View";
-        $display['back'] = "Back";
-
-        // IDに該当する学生情報を取得する
-        $data = Classes::where('id', '=', $id)->find($id);
-
-        // 学生データは存在しない場合一覧画面へ移動する
-        if (!$data) {
-            return redirect('students/list');
-        }
-
-        return view('admin.classes.view', compact('display', 'data'));
-    }
-
-    /**
     * 授業登録画面
     *
     * @param $request
@@ -70,7 +47,7 @@ class ClassesController extends Controller
     {
         $display = array();
         $dataedit = array();
-        $display['heading'] = "Classes Register";
+        $display['heading'] = trans('messages.lbl_class_register');
         $display['button'] = trans('messages.lbl_register');
         $display['button_act'] = "Register";
 
@@ -108,7 +85,7 @@ class ClassesController extends Controller
     public function edit($id) 
     {
         $display = array();
-        $display['heading'] = "Class Update";
+        $display['heading'] = trans('messages.lbl_class_update');;
         $display['button'] = trans('messages.lbl_update');
         $display['button_act'] = "Update";
 
